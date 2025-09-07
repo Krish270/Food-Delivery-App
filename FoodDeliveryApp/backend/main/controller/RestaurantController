@@ -1,0 +1,24 @@
+package backend.main.controller;
+
+import backend.main.entity.Restaurant;
+import backend.main.repository.RestaurantRepository;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/restaurants")
+@CrossOrigin(origins = "*") // allow frontend to call backend
+public class RestaurantController {
+
+    private final RestaurantRepository restaurantRespository;
+
+    public RestaurantController(RestaurantRepository restaurantRespository) {
+        this.restaurantRespository = restaurantRespository;
+    }
+
+    @GetMapping
+    public List<Restaurant> getAllRestaurants() {
+        return restaurantRespository.findAll();
+    }
+}

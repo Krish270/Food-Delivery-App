@@ -1,0 +1,28 @@
+## Food Delivery App
+
+A modern full-stack food delivery platform built with React, Spring-Boot, Node.js and MySQL
+
+# Features
+- JWT Authentication
+- Browse restaurants & menus
+- Add to cart & checkout
+- Stripe test payments
+- Real-time order tracking 
+- Google Maps integration
+- Email notifications
+- Admin dashboard
+
+
+# Tech Stack
+- Frontend: React + Tailwind + Axios
+- Backend (Java): SpringBoot 3 (Orders, Users, Restaurants)
+- Backend (Node): Express.js (Payments, Maps, Notifications)
+- Databases: MySQL
+- Integrations: Stripe API, Google Maps API
+- Deployment: Docker, Vercel (frontend), Render/Fly (backends), Railway (MySQL)
+
+
+# QuickStart
+'''bash
+# Run all services
+docker-compose up --build
