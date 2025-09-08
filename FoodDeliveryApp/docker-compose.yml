@@ -25,7 +25,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: foodpassword
 
   frontend:
-    build: ./frontend
+    build: "./frontend"
     container_name: food_frontend
     ports:
       - '5173:5173'
@@ -34,3 +34,4 @@ services:
 
     
     
+
