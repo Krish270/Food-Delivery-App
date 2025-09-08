@@ -1,19 +1,21 @@
-version: '3.9'
+version: "3.9"
+
 services:
   db:
     image: mysql:8.0
+    container_name: food_db
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: food_delivery
       MYSQL_USER: fooduser
       MYSQL_PASSWORD: foodpassword
     ports:
-      - '3306:3306'
+      - "3306:3306"
     volumes:
       - ./database:/docker-entrypoint-initdb.d
 
   backend:
-    build: ./backend
+    build: "./backend"
     container_name: food_backend
     ports:
       - "8080:8080"
@@ -28,10 +30,11 @@ services:
     build: "./frontend"
     container_name: food_frontend
     ports:
-      - '5173:5173'
+      - "5173:5173"
     depends_on:
       - backend
 
     
     
+
 
